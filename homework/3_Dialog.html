@@ -1,6 +1,7 @@
 <html>
   <head>
     <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <style>
       body {
         background-color: #4285f4;
@@ -39,6 +40,13 @@
 	text-align: center;
       }
     </style>
+    <script type="text/javascript">
+ 
+        $('.modal').on('keyup', function(){
+            $(this).next().focus();
+        });
+
+    </script>
   </head>
   <body>
     <div class="message">
@@ -54,11 +62,11 @@
       접근할 수 있어야 하며, dialog을 닫을 시 해당 dialog를 열기 위해 사용했던 element에게 다시 focus가
       가야 합니다.
     </span>
-    <dialog id="dialog">
+    <dialog id="dialog" >
       <div class="hello-world">Hello, world!</div>
-      <input type="radio" name="option">Hello!
-      <input type="radio" name="option">Bye!
-      <div id="close" class="fancy-button">닫기</div>
+      <input type="radio" name="option" class="modal">Hello!
+      <input type="radio" name="option" class="modal">Bye!
+      <div id="close" class="fancy-button" tabindex="0" class="modal">닫기</div>
     </dialog>
     <script>
       let settingButton = document.getElementById('setting');
@@ -80,6 +88,7 @@
       
       function closeDialog() {
         dialog.close();
+        document.getElementById('setting').focus();
       }
     </script>
   </body>
