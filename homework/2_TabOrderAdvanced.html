@@ -14,8 +14,13 @@
         text-align: center;
         padding: 20px 0 50px;
       }
+      .dropdown{
+        float :left;
+
+      }
       .dropdown>div {
-	color: black;
+
+        color: black;
         font-size: 18px;
         margin-bottom: 5px;
       }
@@ -25,27 +30,26 @@
         padding: 15px 0;
       }
       .title-bar {
+
         background-color: white;
-	border-radius: 10px;
+  border-radius: 10px;
         height: 50px;
-	margin-bottom: 20px;
+  margin-bottom: 20px;
         padding: 20px;
       }
       select {
-	width: 70px;	
+        
+  width: 70px;  
       }
     </style>
   </head>
   <body>
     <div class="message">
-	<div>a11y homework:</div>
-	<div>Tab order advanced</div>
-	</div>
+  <div>a11y homework:</div>
+  <div>Tab order advanced</div>
+  </div>
     <div class="title-bar">
-      <div class="links">
-        <a href="#">다운로드</a>
-        <a href="#">닫기</a>
-      </div>
+    <!--드롭다운 메뉴 float:left-->
       <div class="dropdown">
         <div>언어 선택하기</div>
         <select>
@@ -55,12 +59,13 @@
           <option value="3">Python</option>
         </select>
       </div>
-    </div>
-    <div class="title-bar">
       <div class="links">
         <a href="#">다운로드</a>
         <a href="#">닫기</a>
       </div>
+     
+    </div>
+    <div class="title-bar">
       <div class="dropdown">
         <div>파일 형식 선택하기</div>
         <select>
@@ -70,6 +75,11 @@
           <option value="3">gp5</option>
         </select>
       </div>
+      <div class="links">
+        <a href="#">다운로드</a>
+        <a href="#">닫기</a>
+      </div>
+      
     </div>
     <a style="display: block; margin: 30px 10px;" href="#">Contact us</a>
     <span style="line-height: 23px">
